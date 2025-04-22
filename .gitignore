@@ -2,3 +2,7 @@
 # results/*
 __pycache__/*
 *.pyc
+assets/*
+!assets/demo/images/*
+results/*
+logs/*
