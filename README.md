@@ -43,32 +43,37 @@ The Teaser pretrained model and our 203 landmark model can also be found on [Goo
 We provide several demos. One you can test the model on a single image by 
 
 ```bash
-python test_image.py --input_path samples/1.jpg --out_path results/ --checkpoint pretrained_models/TEASER.pt --crop --use_teaser_generator
+export PYTHONPATH=.
+python main/test_image.py --input_path samples/1.jpg --out_path results/ --checkpoint pretrained_models/TEASER.pt --crop --use_teaser_generator
 ```
 
 you can test the model on several videos by
 
 ```bash
-python demo_video.py --input_path samples/demo_videos --out_path results/reconstruct_videos --checkpoint pretrained_models/TEASER_v1.pt --crop --use_teaser_generator
+export PYTHONPATH=.
+python main/demo_video.py --input_path samples/demo_videos --out_path results/reconstruct_videos --checkpoint pretrained_models/TEASER_v1.pt --crop --use_teaser_generator
 ```
 
 if you want to swap a single face by swapping tokens, you can use
 
 ```bash
-python test_image_swap_token.py --input_path_source samples/swap_token/1.jpg  --input_path_target samples/swap_token/2.jpg --out_path results/ --checkpoint pretrained_models/TEASER_v1.pt  --crop  --use_teaser_generator
+export PYTHONPATH=.
+python main/test_image_swap_token.py --input_path_source samples/swap_token/1.jpg  --input_path_target samples/swap_token/2.jpg --out_path results/ --checkpoint pretrained_models/TEASER_v1.pt  --crop  --use_teaser_generator
 ```
 
 or if you want to swap videos by swapping tokens, you can use
 
 ```bash
-python demo_video_swap_token.py --input_image_path samples/swap_token/1.jpg  --input_videos_path samples/swap_token/videos --out_path results/swap_videos --checkpoint pretrained_models/TEASER_v1.pt  --crop --use_teaser_generator
+export PYTHONPATH=.
+python main/demo_video_swap_token.py --input_image_path samples/swap_token/1.jpg  --input_videos_path samples/swap_token/videos --out_path results/swap_videos --checkpoint pretrained_models/TEASER_v1.pt  --crop --use_teaser_generator
 ```
 
 
 or if you want to swap expressions, you can use
 
 ```bash
-python test_image_swap_expression.py --input_path_source samples/swap_expression/1.jpg --input_path_target samples/swap_expression/2.jpg  --out_path results/ --checkpoint pretrained_models/TEASER_v1.pt  --crop --render_orig --use_teaser_generator
+export PYTHONPATH=.
+python main/test_image_swap_expression.py --input_path_source samples/swap_expression/1.jpg --input_path_target samples/swap_expression/2.jpg  --out_path results/ --checkpoint pretrained_models/TEASER_v1.pt  --crop --render_orig --use_teaser_generator
 ```
 
 
